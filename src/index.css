@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+:root {
+  font-family: 'Roboto', sans-serif, Inter, Avenir, Helvetica, Arial;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

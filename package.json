@@ -1,0 +1,34 @@
+{
+	"name": "client",
+	"private": true,
+	"homepage": "https://vicarillous.github.io",
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build"
+	},
+	"dependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-router-dom": "^6.3.0",
+		"socket.io-client": "^4.5.1",
+		"cors": "^2.8.5",
+		"express": "^4.18.1",
+		"nodemon": "^2.0.19",
+		"socket.io": "^4.5.1"
+	},
+	"devDependencies": {
+		"@types/react": "^18.0.15",
+		"@types/react-dom": "^18.0.6",
+		"@vitejs/plugin-react": "^2.0.0",
+		"autoprefixer": "^10.4.7",
+		"gh-pages": "^4.0.0",
+		"postcss": "^8.4.14",
+		"tailwindcss": "^3.1.6",
+		"vite": "^3.0.0"
+	}
+}
