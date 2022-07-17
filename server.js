@@ -1,4 +1,5 @@
 const express = require("express");
+const { resolve } = require("path");
 const app = express();
 const http = require("http");
 const { Server } = require("socket.io");
@@ -43,4 +44,6 @@ io.on("connection", (socket) => {
 	});
 });
 
-server.listen(port, () => console.log(`Server started on port ${port}`));	
+app.use("/", express.static(resolve(__dirname, "./dist")));
+
+server.listen(port, () => console.log(`Server started on port ${port}`));
