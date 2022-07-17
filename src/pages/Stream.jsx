@@ -3,7 +3,7 @@ import context from "../Context";
 
 import "../styles/Visualiser.css";
 
-export const Stream = ({socket}) => {
+export const Stream = () => {
 	const { selectedNumbers } = useContext(context);
 
 	const [lastNumbers, setLastNumbers] = useState([]);

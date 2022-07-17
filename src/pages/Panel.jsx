@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import context from "../Context";
 
-export const Panel = ({ sendMessage, reset, socket }) => {
+export const Panel = ({ sendMessage, reset, removeLastNumber }) => {
 	const { selectedNumbers } = useContext(context);
 
 	return (
@@ -13,7 +13,7 @@ export const Panel = ({ sendMessage, reset, socket }) => {
 					return (
 						<li
 							key={i}
-							className={`bg-slate-200 h-32 w-32 md:w-16 md:h-16 text-6xl md:text-xl rounded-full flex items-center justify-center ${
+							className={`bg-slate-200 h-24 w-24 md:w-16 md:h-16 text-5xl md:text-xl rounded-full flex items-center justify-center ${
 								selectedNumbers.includes(i)
 									? "bg-red-500 text-white"
 									: ""
@@ -34,6 +34,12 @@ export const Panel = ({ sendMessage, reset, socket }) => {
 				className="bg-slate-500 text-white text-lg rounded-lg px-6 py-3 my-3 hover:bg-slate-600 active:bg-red-500"
 			>
 				Resetar
+			</button>
+			<button
+				onClick={() => removeLastNumber()}
+				className="bg-slate-500 text-white text-lg rounded-lg px-6 py-3 my-3 hover:bg-slate-600 active:bg-red-500"
+			>
+				Remover último número
 			</button>
 		</div>
 	);

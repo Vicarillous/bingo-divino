@@ -23,6 +23,10 @@ function App() {
 		}
 	};
 
+	const removeLastNumber = () => {
+		socket.emit("remove_last_number");
+	}
+
 	const reset = () => {
 		socket.emit("reset");
 	}
@@ -47,17 +51,17 @@ function App() {
 							<Panel
 								sendMessage={sendMessage}
 								reset={reset}
-								socket={socket}
+								removeLastNumber={removeLastNumber}
 							/>
 						}
 					/>
 					<Route
 						path="/visualiser"
-						element={<Visualiser socket={socket} />}
+						element={<Visualiser/>}
 					/>
 					<Route
 						path="/stream"
-						element={<Stream socket={socket} />}
+						element={<Stream/>}
 					/>
 				</Routes>
 			</Context.Provider>

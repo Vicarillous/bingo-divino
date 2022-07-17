@@ -38,6 +38,13 @@ io.on("connection", (socket) => {
 		}
 	});
 
+	socket.on("remove_last_number", () => {
+		if (selectedNumbers.length > 0) {
+			selectedNumbers.splice(selectedNumbers.length - 1, 1);
+			io.emit("update_numbers", selectedNumbers);
+		}
+	});
+
 	socket.on("reset", () => {
 		selectedNumbers = [];
 		io.emit("update_numbers", selectedNumbers);
