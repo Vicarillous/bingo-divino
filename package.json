@@ -1,9 +1,7 @@
 {
 	"name": "client",
 	"private": true,
-	"homepage": "https://vicarillous.github.io",
 	"version": "0.0.0",
-	"type": "module",
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
